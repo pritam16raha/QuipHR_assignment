@@ -12,8 +12,7 @@ async function fetchShowData(id: string) {
   try {
     const show = await getShowDetails(id);
     return show;
-  } catch (error) {
-    console.error("Error fetching show data:", error);
+  } catch {
     notFound();
   }
 }
@@ -34,13 +33,12 @@ export async function generateMetadata({
       description: show.summary
         ? show.summary.replace(/<[^>]*>?/gm, "").substring(0, 160)
         : "No summary available.",
-      images: [{ url: show.image?.original || "" }],
+      images: show.image?.original ? [{ url: show.image.original }] : [],
     },
   };
 }
 
 export default async function ShowDetailPage({ params }: ShowDetailPageProps) {
-
   const { id } = await params;
   const show = await fetchShowData(id);
 
