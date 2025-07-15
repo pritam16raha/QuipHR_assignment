@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "placehold.co", // Also add the placeholder domain
+        hostname: "placehold.co",
         port: "",
         pathname: "/**",
       },

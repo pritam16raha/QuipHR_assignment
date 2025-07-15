@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // Import the Next.js Image component
+import Image from 'next/image';
 import { Star } from 'lucide-react';
 import { Show } from '@/types';
 import { motion } from 'framer-motion';
@@ -24,7 +24,6 @@ const Card: React.FC<CardProps> = ({ show }) => {
       <Link href={`/shows/${show.id}`} className="block group h-full">
         <div className="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg group-hover:shadow-blue-500/50 transition-shadow duration-300 h-full flex flex-col">
           <div className="relative w-full h-72">
-             {/* Replace the <img> tag with the <Image> component */}
              <Image
                 src={imageUrl}
                 alt={show.name}

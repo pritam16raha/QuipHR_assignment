@@ -35,7 +35,7 @@ Unit Tested: Key components and logic are covered by unit tests using Jest and R
 How to Run This Project Locally
 Clone the repository:
 
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/pritam16raha/QuipHR_assignment.git
 
 Navigate to the project directory:
 
